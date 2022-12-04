@@ -5,6 +5,9 @@ services:
     build: './php'
     volumes:
       - './src:/var/www/html'
+    deploy:
+        mode: replicated
+        replicas: 4
 
   nginx:
     image: nginx:latest
